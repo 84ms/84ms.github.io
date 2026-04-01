@@ -1,0 +1,366 @@
+
+body {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+h1 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+h2 {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+    font-style: italic;
+}
+p {
+    text-indent: 1.5em;
+    margin: 0.5em 0;
+}
+hr {
+    border: none;
+    text-align: center;
+    margin: 2em 0;
+}
+hr::before {
+    content: "* * *";
+    color: #666;
+}
+blockquote {
+    font-style: italic;
+    margin: 1em 2em;
+    color: #444;
+}
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+}
+.chapter {
+    page-break-before: always;
+}
+.toc {
+    margin: 2em 0;
+}
+.toc ul {
+    list-style: none;
+    padding-left: 1em;
+}
+.toc a {
+    text-decoration: none;
+    color: #333;
+}
+.toc a:hover {
+    text-decoration: underline;
+}
+.back-to-toc {
+    text-align: center;
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+}
+.back-to-toc a {
+    color: #666;
+    text-decoration: none;
+}
+.back-to-toc a:hover {
+    text-decoration: underline;
+}
+
+/* Website overrides */
+body { padding-top: 28px; }
+/* Progress bar */
+.progress-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: #eee;
+    z-index: 100;
+}
+.progress-wrap .fill {
+    height: 100%;
+    background: #ddd;
+}
+.progress-wrap .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75em;
+    line-height: 24px;
+    color: #666;
+}
+.settings-btn {
+    position: absolute;
+    right: 6px;
+    top: 0;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    color: #888;
+    padding: 0 6px;
+    z-index: 1;
+}
+.settings-btn:hover { color: #333; }
+/* Settings dialog */
+.settings-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 200;
+}
+.settings-dialog {
+    position: fixed;
+    top: 28px;
+    right: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.8em;
+    z-index: 201;
+    font-size: 14px;
+    width: 240px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.settings-dialog h3 {
+    margin: 0 0 0.4em;
+    font-size: 0.8em;
+    text-align: left;
+    font-style: normal;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.settings-dialog .section { margin-bottom: 0.7em; }
+.settings-dialog .section:last-child { margin-bottom: 0; }
+.settings-dialog .card-row {
+    display: flex;
+    gap: 4px;
+}
+.settings-dialog .card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    background: none;
+    color: inherit;
+    text-align: center;
+    min-width: 0;
+}
+.settings-dialog .card:hover { background: #f0f0f0; }
+.settings-dialog .card.active { border-color: #666; background: #e8e8e8; }
+.settings-dialog .font-card {
+    flex-direction: column;
+    padding: 6px 4px;
+    gap: 2px;
+}
+.settings-dialog .font-card .preview {
+    font-size: 1.3em;
+    line-height: 1;
+}
+.settings-dialog .font-card .name {
+    font-size: 0.65em;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.settings-dialog .size-card { font-weight: bold; }
+.settings-version {
+    text-align: center;
+    font-size: 0.7em;
+    color: #aaa;
+    margin-top: 0.5em;
+}
+.settings-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    border-top: 1px solid #ddd;
+    margin-top: 0.5em;
+}
+.settings-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 0.3em 0.5em;
+}
+.settings-nav a:hover { text-decoration: underline; }
+.theme-dark .settings-nav { border-color: #444; }
+.theme-dark .settings-nav a { color: #aaa; }
+.theme-sepia .settings-nav { border-color: #d4c5a0; }
+.theme-sepia .settings-nav a { color: #5b4636; }
+@media (prefers-color-scheme: dark) {
+    .theme-auto .settings-nav { border-color: #444; }
+    .theme-auto .settings-nav a { color: #aaa; }
+}
+/* Font sizes */
+body.fs-xs { font-size: 14px; }
+body.fs-s { font-size: 16px; }
+body.fs-m { font-size: 18px; }
+body.fs-l { font-size: 21px; }
+body.fs-xl { font-size: 24px; }
+/* Themes */
+body.theme-dark {
+    background: #1a1a1a;
+    color: #ccc;
+}
+.theme-dark .progress-wrap { background: #252525; }
+.theme-dark .progress-wrap .fill { background: #444; }
+.theme-dark .progress-wrap .label { color: #888; }
+.theme-dark .settings-btn { color: #666; }
+.theme-dark .settings-btn:hover { color: #ccc; }
+.theme-dark .settings-dialog { background: #252525; border-color: #444; color: #ccc; }
+.theme-dark .settings-dialog .card { border-color: #444; }
+.theme-dark .settings-dialog .card:hover { background: #333; }
+.theme-dark .settings-dialog .card.active { border-color: #999; background: #3a3a3a; }
+.theme-dark .settings-dialog .font-card .name { color: #777; }
+.theme-dark .settings-overlay { background: rgba(0,0,0,0.5); }
+.theme-dark .chapter-nav { border-color: #333; }
+.theme-dark .chapter-nav a { color: #aaa; }
+.theme-dark .toc a { color: #aaa; }
+.theme-dark .continue-reading { background: #252525; }
+.theme-dark .continue-reading a { color: #ccc; }
+.theme-dark blockquote { color: #999; }
+.theme-dark hr::before { color: #555; }
+.theme-dark .back-to-toc { border-color: #333; }
+.theme-dark .back-to-toc a { color: #888; }
+
+body.theme-sepia {
+    background: #f4ecd8;
+    color: #5b4636;
+}
+.theme-sepia .progress-wrap { background: #efe3c8; }
+.theme-sepia .progress-wrap .fill { background: #d4c5a0; }
+.theme-sepia .progress-wrap .label { color: #8a7560; }
+.theme-sepia .settings-btn { color: #a08860; }
+.theme-sepia .settings-btn:hover { color: #5b4636; }
+.theme-sepia .settings-dialog { background: #f4ecd8; border-color: #d4c5a0; color: #5b4636; }
+.theme-sepia .settings-dialog .card { border-color: #d4c5a0; }
+.theme-sepia .settings-dialog .card:hover { background: #efe3c8; }
+.theme-sepia .settings-dialog .card.active { border-color: #8a7560; background: #e8dcc0; }
+.theme-sepia .settings-dialog .font-card .name { color: #a08860; }
+.theme-sepia .chapter-nav { border-color: #d4c5a0; }
+.theme-sepia .chapter-nav a { color: #5b4636; }
+.theme-sepia .toc a { color: #5b4636; }
+.theme-sepia .continue-reading { background: #efe3c8; }
+.theme-sepia .continue-reading a { color: #5b4636; }
+.theme-sepia blockquote { color: #7a6550; }
+.theme-sepia hr::before { color: #b0a080; }
+.theme-sepia .back-to-toc { border-color: #d4c5a0; }
+.theme-sepia .back-to-toc a { color: #8a7560; }
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto { background: #1a1a1a; color: #ccc; }
+    .theme-auto .progress-wrap { background: #252525; }
+    .theme-auto .progress-wrap .fill { background: #444; }
+    .theme-auto .progress-wrap .label { color: #888; }
+    .theme-auto .settings-btn { color: #666; }
+    .theme-auto .settings-btn:hover { color: #ccc; }
+    .theme-auto .settings-dialog { background: #252525; border-color: #444; color: #ccc; }
+    .theme-auto .settings-dialog .card { border-color: #444; }
+    .theme-auto .settings-dialog .card:hover { background: #333; }
+    .theme-auto .settings-dialog .card.active { border-color: #999; background: #3a3a3a; }
+    .theme-auto .settings-dialog .font-card .name { color: #777; }
+    .theme-auto .settings-overlay { background: rgba(0,0,0,0.5); }
+    .theme-auto .chapter-nav { border-color: #333; }
+    .theme-auto .chapter-nav a { color: #aaa; }
+    .theme-auto .toc a { color: #aaa; }
+    .theme-auto .continue-reading { background: #252525; }
+    .theme-auto .continue-reading a { color: #ccc; }
+    .theme-auto blockquote { color: #999; }
+    .theme-auto hr::before { color: #555; }
+    .theme-auto .back-to-toc { border-color: #333; }
+    .theme-auto .back-to-toc a { color: #888; }
+}
+/* Navigation */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    font-size: 0.95em;
+}
+.chapter-nav a {
+    color: #333;
+    text-decoration: none;
+}
+.chapter-nav a:hover {
+    text-decoration: underline;
+}
+.chapter-nav .placeholder {
+    width: 120px;
+}
+/* Continue reading link */
+.continue-reading {
+    text-align: center;
+    margin: 2em 0;
+    padding: 1em;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+.continue-reading a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.continue-reading a:hover {
+    text-decoration: underline;
+}
+/* Password form */
+.password-gate {
+    max-width: 320px;
+    margin: 20vh auto;
+    text-align: center;
+}
+.password-gate input {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    padding: 0.4em 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+}
+.password-gate button {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    padding: 0.4em 1.5em;
+    cursor: pointer;
+    border: 1px solid #333;
+    background: #333;
+    color: #fff;
+    border-radius: 3px;
+}
+.password-gate .error {
+    color: #c33;
+    font-size: 0.85em;
+    margin-top: 0.5em;
+}
+.theme-dark .password-gate input { background: #252525; color: #ccc; border-color: #555; }
+.theme-dark .password-gate button { background: #ccc; color: #1a1a1a; border-color: #ccc; }
+.theme-sepia .password-gate input { background: #f4ecd8; color: #5b4636; border-color: #c4b48a; }
+.theme-sepia .password-gate button { background: #5b4636; color: #f4ecd8; border-color: #5b4636; }

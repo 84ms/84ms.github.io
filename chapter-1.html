@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1/31</title>
+    <link rel="stylesheet" href="style.5c3320a6.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap">
+</head>
+<body>
+    <div class="progress-wrap"><div class="fill" id="progress-fill"></div><div class="label" id="progress-label">1/31</div><button class="settings-btn" id="settings-btn">⚙</button></div>
+    <div class="settings-overlay" id="settings-overlay" style="display:none"></div>
+<div class="settings-dialog" id="settings-dialog" style="display:none">
+    <div class="section">
+        <h3>Тема</h3>
+        <div class="card-row">
+            <button class="card" data-theme="light">&#9728; Light</button>
+            <button class="card" data-theme="sepia">&#128220; Sepia</button>
+            <button class="card" data-theme="dark">&#127769; Dark</button>
+            <button class="card" data-theme="auto">&#127760; Auto</button>
+        </div>
+    </div>
+    <div class="section">
+        <h3>Шрифт</h3>
+        <div class="card-row">
+            <button class="card font-card" data-font="Georgia, serif"><span class="preview" style="font-family:Georgia,serif">Aa</span><span class="name">Georgia</span></button>
+            <button class="card font-card" data-font="'Literata', serif"><span class="preview" style="font-family:'Literata',serif">Aa</span><span class="name">Literata</span></button>
+            <button class="card font-card" data-font="'Merriweather', serif"><span class="preview" style="font-family:'Merriweather',serif">Aa</span><span class="name">Merriw.</span></button>
+        </div>
+        <div class="card-row" style="margin-top:4px">
+            <button class="card font-card" data-font="'PT Serif', serif"><span class="preview" style="font-family:'PT Serif',serif">Aa</span><span class="name">PT Serif</span></button>
+            <button class="card font-card" data-font="'Lora', serif"><span class="preview" style="font-family:'Lora',serif">Aa</span><span class="name">Lora</span></button>
+            <button class="card font-card" data-font="'Noto Serif', serif"><span class="preview" style="font-family:'Noto Serif',serif">Aa</span><span class="name">Noto Serif</span></button>
+        </div>
+        <div class="card-row" style="margin-top:4px">
+            <button class="card font-card" data-font="'Inter', sans-serif"><span class="preview" style="font-family:'Inter',sans-serif">Aa</span><span class="name">Inter</span></button>
+            <button class="card font-card" data-font="'Open Sans', sans-serif"><span class="preview" style="font-family:'Open Sans',sans-serif">Aa</span><span class="name">Open Sans</span></button>
+            <button class="card font-card" data-font="'PT Sans', sans-serif"><span class="preview" style="font-family:'PT Sans',sans-serif">Aa</span><span class="name">PT Sans</span></button>
+        </div>
+    </div>
+    <div class="section">
+        <h3>Розмір</h3>
+        <div class="card-row">
+            <button class="card size-card" data-fsize="fs-xs" style="font-size:10px">A</button>
+            <button class="card size-card" data-fsize="fs-s" style="font-size:12px">A</button>
+            <button class="card size-card" data-fsize="fs-m" style="font-size:14px">A</button>
+            <button class="card size-card" data-fsize="fs-l" style="font-size:17px">A</button>
+            <button class="card size-card" data-fsize="fs-xl" style="font-size:20px">A</button>
+        </div>
+    </div>
+    <div class="settings-nav">
+        <span></span>
+        <a href="index.html">Зміст</a>
+        <a href="chapter-2.html">Наступна →</a>
+    </div>
+    <div class="settings-version">2026-04-01 v01</div>
+</div>
+
+    <div id="password-gate" class="password-gate" style="display:none">
+    <form id="pw-form">
+        <input type="password" id="pw-input" placeholder="Пароль" autofocus>
+        <button type="submit">Увійти</button>
+        <div id="pw-error" class="error"></div>
+    </form>
+</div>
+    <div id="encrypted-content" data-enc="FXe08LWUm7RCSNAMXEJ1P0Ii+i7/hSJYPqjOdQdv5bzOpDDZuPP3Tofd4/KOHEhGelTwzJ+huCU+ujywGXt5fSZZyrSA5/xIacM4f5+7yWqngrAeBQU5jW1gdqYfjdcRJIvPpgzD2V0octvQDVvNaflG2TBsMOhVGRBC5gj0yP1OVaz2UC+92nqDsx8lbRN6ogAqNy5XDwaM6iKd5HbxEJ/pgjYsd/RhL7g0dBECjPCIFvK+lYKFehEkl8uFbeRtSvTy3KzBnf0Eyll3UzaTGvmRGy0JXUTP9Dyg4HYEyTv6qeoS/zGYCIjZLH+vPIERds/PTc9oJwL/VpcuTx3N49x35fiG+zhaMKs83LTfmUkoKXiU2OMmiYoNUY1Ui9aKyPrb33GJafaTcNF/PaYYHitwugoF6TELaTsszKiU4xhK0Hj/XuPZWTPHwBssi9r4jwDPEfq1AFngfE2wSPM+z3Y1N/+O+4UBZI3lylGAbObTQL0XL2tvSVPSzqTGvF+blohub5TZ7uflYymgB6tZPhxlh6CVfy16W/AODh4bTX7dl1kiq8+fQ5w2n2KYIKcva8NeWH5WMi4IQ1cRopFax188Pf424cIuO+G0nsUU3gzYyE5UT7Jeh8Vo97zSODSNvURZt3efAeL8o6NXXwtqzbtnQsN5TwfSfUv1IRxPdnekOeDyTw0fcplRHInHMc2GJaigzVDdH9aHF5Z2nqag1XKcwGX/bTT6Dyx5jogN5J4oUkO9emGLhQhKTLqP7ek9RoIsJQR+Qek1sgm+4QWqWO6zr1epgTw7KqESeLbV38MfLkb484qq6bgrzoEMq7Agl06SckLG" style="display:none"></div>
+    <div id="page-content" style="display:none"></div>
+
+    <script src="settings.5e919953.js"></script>
+    <script src="decrypt.99436498.js"></script>
+    <script>
+    (function() {
+        var fill = document.getElementById('progress-fill');
+        var label = document.getElementById('progress-label');
+        function update() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var pct = docHeight > 0 ? Math.round(scrollTop / docHeight * 100) : 0;
+            fill.style.width = pct + '%';
+            label.textContent = '1/31 · ' + pct + '%';
+            localStorage.setItem('84ms-page', 'chapter-1.html');
+            localStorage.setItem('84ms-scroll', String(docHeight > 0 ? scrollTop / docHeight : 0));
+        }
+        function init() {
+            window.addEventListener('scroll', update);
+            // Restore scroll position
+            var saved = localStorage.getItem('84ms-scroll');
+            var savedPage = localStorage.getItem('84ms-page');
+            if (saved && savedPage === 'chapter-1.html') {
+                requestAnimationFrame(function() {
+                    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    window.scrollTo(0, parseFloat(saved) * docHeight);
+                });
+            }
+            update();
+        }
+        window.addEventListener("content-ready", init);
+    })();
+    </script>
+</body>
+</html>

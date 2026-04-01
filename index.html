@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <link rel="stylesheet" href="style.5c3320a6.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Inter:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap">
+</head>
+<body>
+    <div class="progress-wrap"><div class="label" style="color:#999">...</div><button class="settings-btn" id="settings-btn">⚙</button></div>
+    <div class="settings-overlay" id="settings-overlay" style="display:none"></div>
+<div class="settings-dialog" id="settings-dialog" style="display:none">
+    <div class="section">
+        <h3>Тема</h3>
+        <div class="card-row">
+            <button class="card" data-theme="light">&#9728; Light</button>
+            <button class="card" data-theme="sepia">&#128220; Sepia</button>
+            <button class="card" data-theme="dark">&#127769; Dark</button>
+            <button class="card" data-theme="auto">&#127760; Auto</button>
+        </div>
+    </div>
+    <div class="section">
+        <h3>Шрифт</h3>
+        <div class="card-row">
+            <button class="card font-card" data-font="Georgia, serif"><span class="preview" style="font-family:Georgia,serif">Aa</span><span class="name">Georgia</span></button>
+            <button class="card font-card" data-font="'Literata', serif"><span class="preview" style="font-family:'Literata',serif">Aa</span><span class="name">Literata</span></button>
+            <button class="card font-card" data-font="'Merriweather', serif"><span class="preview" style="font-family:'Merriweather',serif">Aa</span><span class="name">Merriw.</span></button>
+        </div>
+        <div class="card-row" style="margin-top:4px">
+            <button class="card font-card" data-font="'PT Serif', serif"><span class="preview" style="font-family:'PT Serif',serif">Aa</span><span class="name">PT Serif</span></button>
+            <button class="card font-card" data-font="'Lora', serif"><span class="preview" style="font-family:'Lora',serif">Aa</span><span class="name">Lora</span></button>
+            <button class="card font-card" data-font="'Noto Serif', serif"><span class="preview" style="font-family:'Noto Serif',serif">Aa</span><span class="name">Noto Serif</span></button>
+        </div>
+        <div class="card-row" style="margin-top:4px">
+            <button class="card font-card" data-font="'Inter', sans-serif"><span class="preview" style="font-family:'Inter',sans-serif">Aa</span><span class="name">Inter</span></button>
+            <button class="card font-card" data-font="'Open Sans', sans-serif"><span class="preview" style="font-family:'Open Sans',sans-serif">Aa</span><span class="name">Open Sans</span></button>
+            <button class="card font-card" data-font="'PT Sans', sans-serif"><span class="preview" style="font-family:'PT Sans',sans-serif">Aa</span><span class="name">PT Sans</span></button>
+        </div>
+    </div>
+    <div class="section">
+        <h3>Розмір</h3>
+        <div class="card-row">
+            <button class="card size-card" data-fsize="fs-xs" style="font-size:10px">A</button>
+            <button class="card size-card" data-fsize="fs-s" style="font-size:12px">A</button>
+            <button class="card size-card" data-fsize="fs-m" style="font-size:14px">A</button>
+            <button class="card size-card" data-fsize="fs-l" style="font-size:17px">A</button>
+            <button class="card size-card" data-fsize="fs-xl" style="font-size:20px">A</button>
+        </div>
+    </div>
+    <div class="settings-nav">
+        <span></span>
+        <a href="index.html">Зміст</a>
+        <a href="chapter-1.html">Наступна →</a>
+    </div>
+    <div class="settings-version">2026-04-01 v01</div>
+</div>
+    <div id="password-gate" class="password-gate" style="display:none">
+    <form id="pw-form">
+        <input type="password" id="pw-input" placeholder="Пароль" autofocus>
+        <button type="submit">Увійти</button>
+        <div id="pw-error" class="error"></div>
+    </form>
+</div>
+    <div id="encrypted-content" data-enc="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" style="display:none"></div>
+    <div id="page-content" style="display:none"></div>
+
+    <script src="settings.5e919953.js"></script>
+    <script src="decrypt.99436498.js"></script>
+    <script>
+    (function() {
+        function onReady() {
+            var page = localStorage.getItem('84ms-page');
+            if (page) { window.location.href = page; return; } window.location.href = "chapter-1.html";
+            if (page) {
+                var el = document.getElementById('continue-reading');
+                var link = document.getElementById('continue-link');
+                if (el && link) {
+                    link.href = page;
+                    el.style.display = 'block';
+                }
+            }
+        }
+        window.addEventListener("content-ready", onReady);
+    })();
+    </script>
+</body>
+</html>
