@@ -1,0 +1,38 @@
+# 84 мілісекунди — public marketing site.
+# Search engines: welcome (no caching).
+# Web archives (Wayback Machine, archive.today, etc.): blocked.
+# Encrypted reader at /r/: not indexable by anyone.
+
+User-agent: *
+Allow: /
+Disallow: /r/
+
+# Internet Archive — Wayback Machine
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: ia_archiver-web.archive.org
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Wayback
+Disallow: /
+
+User-agent: Wayback-Machine
+Disallow: /
+
+# archive.today / archive.ph / archive.is
+User-agent: archive.today
+Disallow: /
+
+User-agent: ArchiveTeam
+Disallow: /
+
+# Mirroring / scraping fetchers
+User-agent: HTTrack
+Disallow: /
+
+User-agent: heritrix
+Disallow: /
